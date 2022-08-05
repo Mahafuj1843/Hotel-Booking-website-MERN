@@ -1,0 +1,30 @@
+:root {
+    --main : #003580;
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
+.navber{
+    height: 50px;
+    background: var(--main);
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    font-weight: 500;
+    color: var(--white)
+}
+.navButton{
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: none;
+    color: var(--main);
+    cursor: pointer;
+}

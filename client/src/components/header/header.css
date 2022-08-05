@@ -1,0 +1,113 @@
+:root {
+    --main : #003580;
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+.header{
+    background-color: var(--main);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.headerContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 50px 0px;
+}
+.headerList{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.itemList{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+}
+.itemList.active{
+    border: 1px solid #ffffff;
+}
+.headerDec{
+    margin: 20px 0;
+    font-size: 20px;
+}
+.headerSearch{
+    position: absolute;
+    bottom: -25px;
+    height: 30px;
+    background: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+    border-radius: 5px;
+    color: gray;
+    width: 100%;
+    max-width: 1024px;
+}
+.headerIcon{
+    font-size: 20px;
+    color: lightgray;
+}
+.headerBtn{
+   padding: 5px 10px;
+   background: var(--blue);
+   color: white;
+   border: none;
+   height: 100%;
+}
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.headerSearchInput{
+    border: none;
+    outline: none;
+}
+.headerSearchItem{
+    cursor: pointer;
+}
+.date{
+    position: absolute;
+    top: 53px;
+    z-index: 2;
+}
+.options{
+    position: absolute;
+    top: 53px;
+    background: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+.optionsItem{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+.optionsCounter{
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: #003580;
+    border: 1px solid #003580;
+    cursor: pointer;
+}
+.optionsCounter:disabled{
+    cursor: not-allowed;
+    color: red;
+}
