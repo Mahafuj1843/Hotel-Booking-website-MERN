@@ -15,6 +15,9 @@
     max-width: 1024px;
     margin: 20px 0 50px 0px;
 }
+.headerContainer.listMode{
+    margin: 20px 0 0px 0px;
+}
 .headerList{
     display: flex;
     gap: 40px;
@@ -44,27 +47,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 10px 0px;
     border-radius: 5px;
     color: gray;
     width: 100%;
     max-width: 1024px;
 }
 .headerIcon{
+    padding: 0px 10px;
     font-size: 20px;
     color: lightgray;
 }
 .headerBtn{
-   padding: 5px 10px;
    background: var(--blue);
+   padding: 10px 20px;
    color: white;
    border: none;
-   height: 100%;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 15px;
 }
 .headerSearchItem{
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 .headerSearchInput{
     border: none;

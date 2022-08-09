@@ -6,6 +6,7 @@ import Navber from '../../components/navber/Navber';
 import Property from '../../components/property/Property';
 import PopularP from '../../components/popularProperty/PopularP';
 import MailList from '../../components/mailList/MailList';
+import Footer from '../../components/footer/Footer';
 
 
 export const Home = () => {
@@ -19,8 +20,9 @@ export const Home = () => {
         <Property/>
         <h1 className='homeTitle'>Homes guests love</h1>
         <PopularP/>
-        <MailList/>
       </div>
+      <MailList/>
+      <Footer/>
     </div>
   )
 }

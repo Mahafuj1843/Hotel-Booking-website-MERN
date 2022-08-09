@@ -1,0 +1,86 @@
+.list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.listContainer{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+.listSearch{
+    flex: 1;
+    position: sticky;
+    background: #ffbb00;
+    border-radius: 10px;
+    top: 0;
+    padding: 10px;
+    height: max-content;
+}
+.lsText{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.sItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.sItem>label{
+    font-size: 13px;
+}
+.sItem>input{
+    height: 30px;
+    border: none;
+    padding: 5px;
+}
+.sItem>span{
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.dates{
+    position: absolute;
+    left: 100%;
+    z-index: 2;
+}
+.option{
+    padding: 10px;
+}
+.sOption{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 13px;
+    border: none;
+} 
+.sOption .sOptionI{
+    width: 70px;
+    height: 20px;
+}
+.sBtn{
+    width: 100%;
+    border: none;
+    background: #003580;
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in;
+}
+.sBtn:hover{
+    background: #003599;
+}
+.listResult{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
