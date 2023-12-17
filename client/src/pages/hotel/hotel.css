@@ -1,3 +1,6 @@
+*{
+    padding: 0;
+}
 .hotel{
     display: flex;
     align-items: center;
@@ -26,7 +29,19 @@
     border-radius: 5px;
 }
 .hotelTitle{
-    font-size: 20px;
+    font-size: 25px;
+}
+.detailsTitle{
+    font-size: 18px;
+}
+.facilities{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.facilities svg{
+    color: green !important;
 }
 .hotelAddress{
     font-size: 12px;
@@ -59,36 +74,66 @@
 .hotelDetails{
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 50px;
     margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gainsboro;
 }
 .hotelDetailsTexts{
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
 .hotelDesc{
     font-size: 14px;
     margin-top: 20px;
     text-align: justify;
+    column-gap: 10px;
+}
+.hotelDesc p{
+    margin-bottom: 20px;
+}
+.hotelDesc p:nth-child(6){
+    font-size: 12px;
+    font-weight: 700;
 }
 .hotelDetailsPrice{
     flex: 1;
+    height: fit-content;
     background: #ebf3ff;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     padding: 20px;
 }
 .hotelDetailsPrice>h1{
-    font-size: 18px;
-    color: grey;
+    font-size: 15px;
+    color: black;
 }
-.hotelDetailsPrice>span{
+.ph-content{
+    width: fit-content;
+    display: flex;
+    align-items:stretch;
+    column-gap: 10px;
+}
+.ph-icon{
+    width: 21px;
+    height: 21px;
+}
+.ph-text{
+    font-size: 12px;
+}
+.hotelDetailsPrice>p{
     font-size: 14px;
+    font-weight: 700;
+    margin: 0;
 }
 .hotelDetailsPrice>h2{
     font-weight: 300;
 }
-.hotelDetailsPrice>button{
+.hotelDetailsPrice>button,
+.button{
     background: #0071c2;
     font-weight: bold;
     color: white;
@@ -96,6 +141,7 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 .slide{
     position:fixed;
@@ -132,4 +178,388 @@
     font-size: 40px;
     color: whitesmoke;
     cursor: pointer;
+}
+
+.error-text{
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+}
+
+/* Search */
+.Search{
+    background: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    color: gray;
+    width: 70%;
+    max-width: 1024px;
+}
+.Icon{
+    padding: 0px 10px;
+    font-size: 20px;
+    color: lightgray;
+}
+.Btn{
+   background: var(--blue);
+   padding: 8px 14px;
+   color: white;
+   border: none;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 15px;
+}
+.SearchItem{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.SearchItem>span{
+    cursor: pointer;
+}
+.date{
+    position: absolute;
+    top: 53px;
+    z-index: 10;
+}
+.options{
+    position: absolute;
+    top: 53px;
+    background: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+.optionsItem{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+.optionsCounter{
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: #003580;
+    border: 1px solid #003580;
+    cursor: pointer;
+}
+.optionsCounter:disabled{
+    cursor: not-allowed;
+    color: red;
+}
+
+/* Rooms */
+
+.room{
+    width: 100%;
+    display: flex;
+}
+.reserve{
+    flex: 1;
+}
+.room table{
+    width: 100%;
+    flex: 4;
+}
+.reserveHead{
+    margin-top: 2px;
+    height: 38px;
+    background: #003580;
+}
+.room table tr{
+    display: flex;
+    border-bottom: 1px solid #5bbaff;
+}
+.room table th:nth-child(1),
+.room table th:nth-child(2),
+.room table th:nth-child(3),
+.room table th:nth-child(4){
+    border-right: 1px solid #5bbaff;
+}
+.room table th:nth-child(1){
+    flex: 8;
+    background-color: #003580;
+    color: white;
+    padding: 8px 0;
+}
+.room table th:nth-child(2){
+    flex: 2.5;
+    background-color: #003580;
+    color: white;
+    padding: 8px 0;
+}
+.room table th:nth-child(3){
+    flex: 5.5;
+    background-color: #003580;
+    color: white;
+    padding: 8px 0;
+}
+.room table th:nth-child(4),
+.room table th:nth-child(5){
+    flex: 4;/*5*/
+    background-color: #003580;
+    color: white;
+    padding: 8px 0;
+}
+.room table td:nth-child(1),
+.room table td:nth-child(2),
+.room table td:nth-child(3),
+.room table td:nth-child(4){
+    border-right: 1px solid #5bbaff;
+}
+
+.room table td:nth-child(1){
+    flex: 8;
+    padding: 8px 0;
+}
+.room table td:nth-child(2){
+    flex: 2.5;
+    padding: 8px 0;
+}
+.room table td:nth-child(3){
+    flex: 5.5;
+    padding: 8px 0;
+}
+.room table td:nth-child(4),
+.room table td:nth-child(5){
+    flex: 4;/*6*/
+    padding: 8px 0;
+}
+.room table td:nth-child(5){
+    padding: 0 !important;
+    height: 38px;
+}
+
+.roomTitle{
+    font-size: 15px;
+    font-weight: 700;
+    color: #003580;
+}
+.tdData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.roomFacilities{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.price{
+    font-size: 15px;
+    font-weight: 700;
+}
+.roomIcon{
+    padding: 0px 2px;
+    font-size: 20px;
+    color: black;
+    align-self: center;
+}
+.roomData{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
+}
+.roomNumberContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Review */
+.review,
+.rules,
+.surroun{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+.review .top,
+.rules .top,
+.surroun .top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review .top>span,
+.rules .top>span,
+.surroun .top>span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.review .top>a,
+.rules .top>a,
+.surroun .top>a{
+    background: #0071c2;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.review .mid{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.review .mid>span{
+    font-size: 14px;
+    font-weight: 700;
+    background: #003580;
+    padding: 5px;
+    border-bottom-left-radius: 0 !important;
+    border-radius: 5px;
+    color: white;
+}
+.review .mid div{
+    font-size: 13px !important;
+    font-weight: 600;
+    color: gray;
+}
+.review .mid div span:nth-child(1){
+    color: black !important;
+}
+.review .cat{
+    font-size: 15px;
+    font-weight: 800;
+}
+.review .ratting{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 15px;
+}
+.review .ratting .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.ratting .content .contentText{
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ratting .content .contentBox{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.ratting .content .contentBox::before{
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 6px;
+    background: #CC0000;
+    z-index: 1;
+}
+
+/* Rules */
+
+.rules .content{
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.rules .content .row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px 0;
+    font-size: 12px;
+}
+.rules .row-content{
+    flex:1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+.rules .row>span{
+    flex: 4;
+}
+
+.surroun .mapLink{
+    color: #5bbaff;
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.surroun .mapLink:hover{
+    text-decoration: underline;
+}
+.surroun .cat{
+    font-size: 15px;
+    font-weight: 800;
+}
+.surroun .content{
+    width: 100%;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 30px;
+}
+.surroun .content .row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.surroun .content .row .cat{
+    margin-bottom: 15px;
+}
+.surroun .content .row>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.surroun .icon-content{
+    width: fit-content;
+    display: flex;
+    align-items:stretch;
+    column-gap: 5px;
 }
